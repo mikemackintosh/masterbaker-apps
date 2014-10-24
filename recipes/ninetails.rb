@@ -11,14 +11,7 @@ execute "Installing ninetails dependencies" do
   user 'root'
 end
 
-link "" do
-  to 
-end
-
-remote_file "Copy ninetails" do 
-  path "/usr/local/bin/ninetails" 
-  source "file://#{Chef::Config[:file_cache_path]}/ninetails/ninetails"
-  owner 'root'
-  group 'root'
-  mode 0755
+link "/usr/local/bin/ninetails" do
+  to "#{Chef::Config[:file_cache_path]}/ninetails/ninetails"
+  type :hard
 end
