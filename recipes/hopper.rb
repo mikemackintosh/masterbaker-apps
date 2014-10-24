@@ -1,4 +1,4 @@
-unless ::File.directory?("/Applications/Hopper.app")
+unless ::File.directory?("/Applications/Hopper Disassembler v3.app")
 	remote_file "#{Chef::Config[:file_cache_path]}/Hopper-#{node['apps']['hopper']['version']}.zip" do
 	  source "http://www.hopperapp.com/HopperWeb/downloads/Hopper-#{node['apps']['hopper']['version']}.zip"
 	  checksum node['apps']['hopper']['checksum']
@@ -6,7 +6,7 @@ unless ::File.directory?("/Applications/Hopper.app")
 	end
 
 	execute "unzip-hopper" do
-	  command "unzip -o #{Chef::Config[:file_cache_path]}/Hopper-#{}{node['apps']['hopper']['version']}.zip -d /Applications"
+	  command "unzip -o #{Chef::Config[:file_cache_path]}/Hopper-#{node['apps']['hopper']['version']}.zip -d /Applications"
 	  action :nothing
 	end
 end
