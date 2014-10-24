@@ -14,6 +14,7 @@ end
 
 # Configure
 unless node['apps']['1password']['license_data'].nil?
+
   mac_os_x_userdefaults "1Password :: License software for #{node['apps']['1password']['name']}" do
     domain "ws.agile.1Password"
     key "License"
@@ -68,4 +69,5 @@ unless node['apps']['1password']['license_data'].nil?
     key "DisableCoreAnimation"
     value node['apps']['1password']['settings']['disable_animations']
   end
+  
 end
