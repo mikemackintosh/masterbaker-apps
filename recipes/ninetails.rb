@@ -13,5 +13,5 @@ end
 
 link "/usr/local/bin/ninetails" do
   to "#{Chef::Config[:file_cache_path]}/ninetails/ninetails"
-  type :hard
+  link_type :hard
 end
