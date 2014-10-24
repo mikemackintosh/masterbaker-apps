@@ -1,4 +1,4 @@
-git "/usr/local/opt/ninetails" do
+git "#{Chef::Config[:file_cache_path]}/ninetails" do
   repository node['apps']['ninetails']['repository']
   revision node['apps']['ninetails']['version']
   destination "#{Chef::Config[:file_cache_path]}/ninetails"
@@ -12,5 +12,5 @@ execute "Installing ninetails dependencies" do
 end
 
 link "/usr/local/bin/ninetails" do
-  to "/usr/local/opt/ninetails/ninetails"
+  to "#{Chef::Config[:file_cache_path]}/ninetails/ninetails"
 end
