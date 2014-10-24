@@ -8,4 +8,5 @@ version          "0.2.1"
 supports         "apps"
 
 depends "homebrew"
+depends "mac_os_x"
 depends "dmg"
