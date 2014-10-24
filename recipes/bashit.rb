@@ -4,7 +4,7 @@ bash_it_version = node['apps']['bashit']['version']
 
 git "#{Chef::Config[:file_cache_path]}/bash_it" do
   repository node['apps']['bashit']['repository']
-  revision version_string_for('bashit')
+  revision node['apps']['bashit']['version']
   destination "#{Chef::Config[:file_cache_path]}/bash_it"
   action :sync
 end
