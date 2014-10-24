@@ -1,4 +1,3 @@
-
 git "/usr/local/opt/ninetails" do
   repository node['apps']['ninetails']['repository']
   revision node['apps']['ninetails']['version']
