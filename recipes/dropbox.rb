@@ -6,3 +6,10 @@ unless ::File.directory?("/Applications/Dropbox.app")
 	  action      :install
 	end
 end
+
+ruby_block 'exit_if_dropbox_not_configured' do
+block do
+  raise "\n\nYou should run Dropbox and configure it before proceeding. Run chef again when done\n\n"
+end
+not_if { File.exists?(File.expand_path("~/.dropbox")) }
+end
