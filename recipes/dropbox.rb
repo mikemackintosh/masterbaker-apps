@@ -1,8 +1,8 @@
 unless ::File.directory?("/Applications/Dropbox.app")
 	dmg_package 'Dropbox' do
 	  volumes_dir 'Dropbox Installer'
-	  source      'https://www.dropbox.com/download?plat=mac'
-	  checksum    '0b21a207366f44bfab270eb2a4ae00c20ff43b32'
+	  source      "https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%20#{node['apps']['dropbox']['version']}.dmg"
+	  checksum    node['apps']['dropbox']['checksum']
 	  action      :install
 	end
 end
