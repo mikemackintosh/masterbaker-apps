@@ -1,4 +1,9 @@
-
+#
+# Cookbook Name: apps
+# Recipe Name: coda2
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 unless ::File.directory?("/Applications/Coda 2.app")
   remote_file "#{Chef::Config[:file_cache_path]}/Coda%20#{node['apps']['coda2']['version']}.zip" do
     source "http://download.panic.com/coda/Coda%20#{node['apps']['coda2']['version']}.zip"

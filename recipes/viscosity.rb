@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: viscosity
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 unless ::File.directory?("/Applications/Viscosity.app")
 	dmg_package 'Viscosity' do
 	  volumes_dir 'Viscosity'

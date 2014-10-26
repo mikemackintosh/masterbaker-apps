@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: dropbox
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 unless ::File.directory?("/Applications/Dropbox.app")
 	dmg_package 'Dropbox' do
 	  volumes_dir 'Dropbox Installer'

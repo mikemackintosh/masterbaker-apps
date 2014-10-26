@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: chrome
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 unless ::File.directory?("/Applications/Google Chrome.app")
 	dmg_package 'Google Chrome' do
 	  dmg_name 'googlechrome'

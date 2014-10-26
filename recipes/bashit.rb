@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: bashit
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 # From sprout-base, kthxbai!
 
 bash_it_version = node['apps']['bashit']['version']

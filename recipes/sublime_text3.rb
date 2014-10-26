@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: sublimetext3
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 # Install
 unless ::File.directory?("/Applications/Sublime Text.app")
 

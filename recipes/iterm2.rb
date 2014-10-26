@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: iterm
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 unless ::File.directory?("/Applications/iTerm.app")
   remote_file "#{Chef::Config[:file_cache_path]}/iTerm2_#{node['apps']['iterm2']['version']}.zip" do
     source "https://iterm2.com/downloads/stable/iTerm2_#{node['apps']['iterm2']['version']}.zip"

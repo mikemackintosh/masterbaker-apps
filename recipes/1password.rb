@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: 1Password
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 # Install
 unless ::File.directory?("/Applications/1Password 5.app")
   remote_file "#{Chef::Config[:file_cache_path]}/1Password-#{node['apps']['1password']['version']}.zip" do

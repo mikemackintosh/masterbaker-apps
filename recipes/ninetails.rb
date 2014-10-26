@@ -1,3 +1,9 @@
+#
+# Cookbook Name: apps
+# Recipe Name: ninetails
+#
+# Copyright 2014, Mike Mackintosh <m@zyp.io>
+#
 git "#{Chef::Config[:file_cache_path]}/ninetails" do
   repository node['apps']['ninetails']['repository']
   revision node['apps']['ninetails']['version']
