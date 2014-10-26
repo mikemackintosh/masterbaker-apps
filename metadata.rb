@@ -10,3 +10,9 @@ supports         "apps"
 depends "homebrew"
 depends "mac_os_x"
 depends "dmg"
+
+# 0.2.3
+# - Added knox
+#
+# <= 0.2.2
+# - Bunch of stuff
