@@ -4,7 +4,7 @@ maintainer_email "m@splug.io"
 license          "Apache 2.0"
 description      "Manage Apps for OSX"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.2.5"
+version          "0.2.6"
 supports         "apps"
 
 depends "homebrew"
@@ -12,6 +12,9 @@ depends "mac_os_x"
 depends "dmg"
 
 
+# 0.2.6
+# - Added a few changes to bashit
+#
 # 0.2.5
 # - Added Mou
 #
