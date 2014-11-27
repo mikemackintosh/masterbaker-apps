@@ -15,6 +15,17 @@ git "#{Chef::Config[:file_cache_path]}/bash_it" do
   action :sync
 end
 
+directory "#{node['apps']['current_user']}/.bin" do
+  owner node['apps']['current_user']
+  mode "0700"
+end
+
+cookbook_file "known_hosts.py" do
+  path "#{node['apps']['current_user']}/.bin/known_hosts.py"
+  mode "755"
+  action :create_if_missing
+end
+
 directory node['apps']['bashit']['dir'] do
   owner node['apps']['current_user']
   mode "0777"

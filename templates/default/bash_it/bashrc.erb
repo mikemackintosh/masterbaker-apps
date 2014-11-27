@@ -11,3 +11,61 @@ source $BASH_IT/bash_it.sh
 
 # Autocomplete symlinked directories
 bind 'set mark-symlinked-directories on'
+
+# Encrypted Zip
+function ze {
+    zip -er protected.zip $2
+}
+
+# Reload
+function reload {
+    source $HOME/.bash_profile
+}
+
+# Find in file
+function fif {
+    echo "Beginning Search For: ${1}"
+    find . -type f -exec grep -Hn --color $1 {} \;
+}
+
+# Networking
+function lldp {
+    sudo tcpdump -vvv -i any -c 1 ether proto 0x88cc
+}
+
+# Security
+#function gc {
+#    openssl req -nodes -sha256 -newkey rsa:4096 -keyout ${@}.key -out ${@}.csr -subj "/C=US/ST=New Jersey/L=Belle Mead/O=sixeightzero/OU=Engineering/CN=${@}"
+#}
+
+# Git
+alias pp='git pull --rebase && git push'
+
+function branch {
+    git symbolic-ref --short HEAD
+}
+
+function nc {
+    nc -z ${@}
+}
+
+alias gd='find . -type d -maxdepth 2'
+
+# Quit
+alias q!="exit"
+alias q="exit"
+alias wq!="exit"
+alias :q="exit"
+alias :q!="exit"
+
+#!/bin/bash
+
+# Get Known SSH Hosts
+complete -W "$( python ~/.bin/known_hosts.py )" ssh
+complete -W "$( python ~/.bin/known_hosts.py )" dig
+complete -W "$( python ~/.bin/known_hosts.py )" ping
+complete -W "$( python ~/.bin/known_hosts.py )" curl
+
+# Knife Stuff
+complete -W "$( python ~/.bin/known_hosts.py )" knife solo cook
+complete -W "$( python ~/.bin/known_hosts.py )" knife solo prepare
