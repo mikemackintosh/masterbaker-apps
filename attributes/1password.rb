@@ -1,5 +1,5 @@
 default['apps']['1password']['version'] = "5.0.1"
-default['apps']['1password']['checksum'] = "864a28cb7658281b365fa7769adab534a44895f1"
+default['apps']['1password']['checksum'] = "359c69dadb9422caab64e3db34c8c5ef5e9355938e811873a57daaf74560605c"
 
 # Licensing
 #default['apps']['1password']['name'] = "A N Other"
