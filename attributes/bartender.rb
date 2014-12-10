@@ -1,2 +1,2 @@
 default['apps']['bartender']['version'] = "1.2.24"
-default['apps']['bartender']['checksum'] = "3c01dabf35272d2ea1f1532d59f19176e200aca5"
+default['apps']['bartender']['checksum'] = "658dbe9a47fb050c71700d6741bc4e9f0e1289f4b93d1ee4babb2a86039b1c34"
