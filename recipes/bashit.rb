@@ -11,7 +11,7 @@ bash_it_version = node['apps']['bashit']['version']
 git "#{Chef::Config[:file_cache_path]}/bash_it" do
   repository node['apps']['bashit']['repository']
   revision node['apps']['bashit']['version']
-  destination "#{node['apps']['bashit']['dir']}/.bash_it"
+  destination "#{node['apps']['current_user']}/.bash_it"
   action :sync
 end
 
